@@ -22,15 +22,17 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Web Server: A compatible web server such as IIS (Internet Information Services) or Apache.
+- PHP: Version 7.2 or greater (osTicket recommends PHP 7.4 for optimal performance). Ensure the necessary PHP extensions are enabled (e.g., php_imap, php_mysql, php_mbstring, etc.).
+- MySQL Database: A MySQL database server (version 5.5 or later) for storing ticketing data.
+- Microsoft Visual C++ Redistributable: Install the appropriate version of Microsoft Visual C++ Redistributable (e.g., 2015-2022) for PHP compatibility.
+- osTicket Installation Package: Download the latest osTicket installation files from the official osTicket website or GitHub repository.
+  
 <img width="1122" alt="Screenshot 2024-11-21 at 7 39 33 PM" src="https://github.com/user-attachments/assets/ef04ca69-2e08-46e6-ae63-af43c15f1dd6">
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Enabling Required Windows Features
+In this step, navigate to the Control Panel > Programs > Programs and Features, then select Turn Windows features on or off. Expand the Application Development Features section and enable the necessary features for osTicket installation, such as CGI and other relevant options depending on your setup. Ensure the required boxes are checked, then click OK to apply changes.
 </p>
 <h2>Installation Steps</h2>
 
@@ -40,7 +42,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Step 1: Installing Microsoft Visual C++ Redistributable
+This step involves installing the Microsoft Visual C++ 2015-2022 Redistributable (x86) package, which is a critical prerequisite for running osTicket. Check the box to agree to the license terms and conditions, then click Install to proceed. Once the installation completes, close the setup window and continue to the next step.
 </p>
 <br />
 
@@ -49,7 +52,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Step 2: Installing MySQL Server
+Begin the installation of MySQL Server 5.5, a required database for osTicket. This screenshot shows the initial setup wizard. Click Next to continue with the installation process. Follow the prompts in the wizard to complete the setup and ensure MySQL Server is properly configured for osTicket.
 </p>
 <br />
 
@@ -58,6 +62,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Step 3: osTicket Installer and PHP Extensions
+This step verifies the prerequisites for installing osTicket. On the left, the osTicket Installer confirms that the required configurations are met:
+
+PHP Version 7.2 or greater (e.g., 7.3.8).
+MySQL extension for PHP (module loaded).
+Additionally, it lists recommended PHP extensions, such as:
+
+PHP IMAP (for mail fetching).
+PHP XML-DOM (for HTML email processing).
+PHP Mbstring, Phar, and others for enhanced functionality.
+On the right, the IIS Manager shows enabled PHP extensions. Ensure that critical extensions like php_mysql.dll, php_openssl.dll, php_imap.dll, and others are enabled. Adjust PHP settings as needed to meet the requirements before proceeding by clicking Continue in the osTicket Installer.
 </p>
 <br />
